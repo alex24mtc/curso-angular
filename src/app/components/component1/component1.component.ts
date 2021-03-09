@@ -33,12 +33,17 @@ export class Component1Component implements OnInit {
     },
   ]
 
+  
   constructor() { 
     console.log('implementamos el constructor');
   }
 
   ngOnInit(): void {
     console.log('NOMBRES',this.alumnos)
+  }
+  
+  recibido(ev){
+    console.log('EVENTO RECIBIDO DEL HIJO', ev);
   }
 
 }

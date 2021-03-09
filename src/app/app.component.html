@@ -1,7 +1,11 @@
-<p class="red">
-    hola {{nombre}}</p>
-<!--si ponemos bracket estamos introduciendo javascript-->
+<p [routerLink]="['/page1']" (click)="navegarPagina(1)">PAGINA 1</p>
+<p [routerLink]="['/page2']" (click)="navegarPagina(2)">PAGINA 2</p>
+<!--la barra significa que ira a la raiz-->
+
+<router-outlet>
 
 
-<app-component1></app-component1>
-<router-outlet></router-outlet>
+</router-outlet>
+<footer>
+    FOOTER
+</footer>

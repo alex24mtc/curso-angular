@@ -2,11 +2,13 @@
 <ul>
     <!--el "a" puede ser lo que sea-->
     <!--seria como un for each, aplica la funcion a cada elemento-->
-    <div *ngFor="let a of alumnos">
+    <div *ngFor="let alumno of alumnos">
         <!--actua de filtro = si es mas de tal edad, solo muestra ese elemento-->
-        <li *ngIf="a.nombre.length>4"> {{a?.nombre}}-{{a?.apellido }}
-        </li>
+        <li *ngIf="alumno.nombre.length>4">
 
+            <app-persona [alumno]="alumno" (mensaje)="recibido($event)">
+            </app-persona>
+            <li>
     </div>
 
 </ul>
