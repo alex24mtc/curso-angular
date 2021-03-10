@@ -15,9 +15,7 @@ export class AppComponent {
   }
 
   navegarPagina(pagina:number){
-    console.log('PAGINA',pagina);
     const url = `/page${pagina}`
-    console.log ('URL',url)
     this.router.navigateByUrl(url)
 
   }

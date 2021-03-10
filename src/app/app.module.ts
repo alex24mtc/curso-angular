@@ -16,6 +16,7 @@ import {MatSelectModule} from '@angular/material/select';
 import { Page1Component } from './pages/page1/page1.component';
 import { Page2Component } from './pages/page2/page2.component';
 import { TwoWayDataBindingComponent } from './components/two-way-data-binding/two-way-data-binding.component';
+import { FormsModule } from '@angular/forms';
 
 // 2. Add your credentials from step 1
 const config = {
@@ -45,7 +46,9 @@ const config = {
     AngularFireModule.initializeApp(config),
     AngularFirestoreModule, // firestore
     AngularFireAuthModule, // auth
-    AngularFireStorageModule, BrowserAnimationsModule // storage
+    AngularFireStorageModule, BrowserAnimationsModule, // storage
+    FormsModule
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

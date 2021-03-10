@@ -7,9 +7,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TwoWayDataBindingComponent implements OnInit {
 
-  constructor() { }
+  //DEFINIR VARIABLES
+  
+  mostrarMensajeError:boolean = true;
+  nombreVal:string;
 
-  ngOnInit(): void {
+
+  constructor() { 
+    console.log('CONSTRUCTOR')
   }
 
+  ngOnInit(): void {
+  console.log('NG ON INIT');
+  this.logNombre('prueba')
+  }
+
+  logNombre(nombre:string){
+    console.log('NOMBRE', nombre);
+    this.nombreVal = nombre;
+  }
+
+  checkearTelf(){
+    console.log('CHECKEAR TELF',this.nombreVal);
+    if(this.nombreVal.length === 9){
+      this.mostrarMensajeError = false
+    }else{
+      this.mostrarMensajeError = true
+    }
+  }
 }
