@@ -10,10 +10,14 @@ export class PersonaComponent implements OnInit {
   @Output() mensaje = new EventEmitter<string>(); //es (mensaje) de component1component.html
 
 
-  constructor() { }
+  constructor() {
+    console.log('constructor');
+   }
 
   ngOnInit(): void {
+    console.log('ng on init');
   }
+  
 
   click(){
     console.log('CLICK'); //si clicas haces la función

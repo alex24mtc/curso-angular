@@ -19,7 +19,7 @@ export class TwoWayDataBindingComponent implements OnInit {
 
   ngOnInit(): void {
   console.log('NG ON INIT');
-  this.logNombre('prueba')
+  this.logNombre('pon el numero de teléfono')
   }
 
   logNombre(nombre:string){
